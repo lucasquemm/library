@@ -1,0 +1,23 @@
+.principal {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(31, 17, 6);
+  width: 2000px;
+  min-width: 700px;
+  height: 901px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.estante1 {
+  flex: 1;
+  background-color: antiquewhite;
+}
+.estante2 {
+  flex: 1;
+  background-color: rgb(187, 120, 33);
+}
+
+.botoes {
+}

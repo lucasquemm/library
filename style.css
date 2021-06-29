@@ -14,10 +14,45 @@
   flex: 1;
   background-color: antiquewhite;
 }
+
+.listaLivros {
+  padding-left: 50px;
+}
 .estante2 {
   flex: 1;
   background-color: rgb(187, 120, 33);
+  padding: 30px;
+}
+
+.formDiv {
+  width: 400px;
+  height: 300px;
+  padding-left: 50px;
+  border: solid 5px black;
+  border-radius: 10px;
+  background-color: rgb(184, 124, 82);
+}
+.form {
+}
+
+.formInput {
+  width: 800px;
+  height: 30px;
+}
+
+.botoesDiv {
+  padding-top: 10px;
 }
 
 .botoes {
+  font-size: 15px;
+}
+
+.checkboxDiv {
+  padding-top: 10px;
+}
+
+#salvar {
+  width: 80px;
+  height: 20.9833px;
 }

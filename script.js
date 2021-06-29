@@ -1,36 +1,42 @@
-let estante = document.querySelector('.estante1')
 let listadorDeLivros = document.querySelector('.listaLivros')
-let adicionaLivro = document.querySelector('#adicionaLivro')
+let salvaLivro = document.querySelector('#salvaLivro')
 let mostraLivros = document.querySelector('#mostraLivros')
+
+let recebeTitulo = document.querySelector('#titulo')
+let recebeAutor = document.querySelector('#autor')
+let recebeAno = document.querySelector('#ano')
+
 let minhaBiblioteca = []
 
-function Livro(titulo, autor, ano, paginas) {
+function Livro(titulo, autor, ano) {
   this.titulo = titulo
   this.autor = autor
   this.ano = ano
-  this.paginas = paginas
 }
 
-function addLivroNaBiblioteca() {
+function limparConteudo() {
+  recebeTitulo.value = ''
+  recebeAutor.value = ''
+  recebeAno.value = ''
+}
+
+function salvaLivroNaBiblioteca() {
   minhaBiblioteca.push(
-    new Livro(
-      prompt('Titulo do Livro'),
-      prompt('Autor'),
-      prompt('ano'),
-      prompt('paginas')
-    )
+    new Livro(recebeTitulo.value, recebeAutor.value, recebeAno.value)
   )
 }
+
 Livro.prototype.infoLivro = function () {
-  return `Titulo do Livro: ${this.titulo} |Autor:${this.autor}| Ano:${this.ano} |Numero de Paginas:${this.paginas}`
+  return `Titulo do Livro: ${this.titulo} |Autor:${this.autor}| Ano:${this.ano}`
 }
 
 function mostraLivrosDaBiblioteca() {
   minhaBiblioteca.forEach((livro) => listaLivros(livro))
 }
 
-adicionaLivro.addEventListener('click', function () {
-  addLivroNaBiblioteca()
+salvaLivro.addEventListener('click', function () {
+  salvaLivroNaBiblioteca()
+  limparConteudo()
 })
 
 mostraLivros.addEventListener('click', function () {
@@ -44,7 +50,7 @@ const livro3 = new Livro('teste3', 'testador3', 2000, 20)
 minhaBiblioteca.push(livro1, livro2, livro3)
 
 function listaLivros(livro) {
-  let li = document.createElement('li')
-  li.textContent = livro.infoLivro()
-  listadorDeLivros.appendChild(li)
+  let livrBanner = document.createElement('p')
+  livrBanner.textContent = livro.infoLivro()
+  listadorDeLivros.appendChild(livrBanner)
 }

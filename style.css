@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .principal {
   display: flex;
   flex-direction: row;
@@ -16,7 +20,11 @@
 }
 
 .listaLivros {
+  padding-top: 30px;
   padding-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 10px;
 }
 .estante2 {
   flex: 1;
@@ -24,35 +32,19 @@
   padding: 30px;
 }
 
-.formDiv {
-  width: 400px;
-  height: 300px;
-  padding-left: 50px;
-  border: solid 5px black;
-  border-radius: 10px;
-  background-color: rgb(184, 124, 82);
-}
-.form {
+form.formDivInterna {
+  display: table;
 }
 
-.formInput {
-  width: 800px;
-  height: 30px;
+div.formDivInterna {
+  display: table-row;
 }
 
-.botoesDiv {
-  padding-top: 10px;
+.formInterno {
+  display: table-cell;
+  margin-bottom: 25px;
 }
 
 .botoes {
   font-size: 15px;
-}
-
-.checkboxDiv {
-  padding-top: 10px;
-}
-
-#salvar {
-  width: 80px;
-  height: 20.9833px;
 }

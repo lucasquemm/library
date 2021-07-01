@@ -14,22 +14,48 @@
       </div>
 
       <div class="estante2">
-        <div class="form" id="formDiv">
-          <p>Titulo</p>
-          <input class="formInput" id="titulo" type="text" />
-          <p>Autor</p>
-          <input class="formInput" id="autor" type="text" />
-          <p>Ano</p>
-          <input class="formInput" id="ano" type="text" />
-          <div class="checkboxDiv">
-            <input class="checkbox" type="checkbox" id="lido" />
-            <label for="lido">Lido</label>
+        <form id="formLivro">
+          <div class="formDivInterna">
+            <label class="formInterno" for="titulo">Titulo do Livro: </label>
+            <input
+              class="formInterno"
+              type="text"
+              name="titulo"
+              id="titulo"
+              required
+            />
           </div>
-          <div class="botoesDiv">
-            <button class="botoes" id="salvaLivro">Salvar Livro</button>
+          <div class="formDivInterna">
+            <label class="formInterno" for="autor">Autor do Livro: </label>
+            <input
+              class="formInterno"
+              type="text"
+              name="autor"
+              id="autor"
+              required
+            />
+          </div>
+          <div class="formDivInterna">
+            <label class="formInterno" for="ano">Ano de publicacao: </label>
+            <input
+              class="formInterno"
+              type="number"
+              name="ano"
+              id="ano"
+              required
+            />
+          </div>
+          <div class="formDivInterna">
+            <label class="formInterno" for="lido">Lido:</label>
+            <input class="formInterno" type="checkbox" id="lido" />
+          </div>
+        </form>
+        <div class="formDivInterna">
+          <button form="formLivro" class="botoes" id="salvaLivro">
+            Salvar Livro
+          </button>
 
-            <button class="botoes" id="mostraLivros">Mostrar Livros</button>
-          </div>
+          <button class="botoes" id="mostraLivros">Mostrar Livros</button>
         </div>
       </div>
     </div>

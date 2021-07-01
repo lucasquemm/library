@@ -47,8 +47,7 @@ function listaLivros(livro) {
 
   listadorDeLivros.appendChild(livrBannerTudo)
   livrBannerTudo.classList.add('livroCard')
-  livrBannerTudo.style.border = '2px solid black'
-  livrBannerTudo.style.borderRadius = '20px'
+
   livrBannerTudo.appendChild(livrBannerTitulo)
   livrBannerTitulo.textContent = `Titulo: ${livro.titulo}`
   livrBannerTudo.appendChild(livrBannerAutor)

@@ -1,17 +1,18 @@
 let id = 0
+class Livro {
+  constructor(titulo, autor, ano, lido) {
+    this.titulo = titulo
+    this.autor = autor
+    this.ano = ano
+    this.lido = lido
+    this.id = id++
+  }
 
-function Livro(titulo, autor, ano, lido) {
-  this.titulo = titulo
-  this.autor = autor
-  this.ano = ano
-  this.lido = lido
-  this.id = id++
-}
+  alteraStatus() {
+    this.lido = !this.lido
+  }
 
-Livro.prototype.alteraStatus = function () {
-  this.lido = !this.lido
-}
-
-Livro.prototype.verificaLido = function () {
-  return this.lido ? 'Lido' : 'Nao lido'
+  verificaLido() {
+    return this.lido ? 'Lido' : 'Nao lido'
+  }
 }
